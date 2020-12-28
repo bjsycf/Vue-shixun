@@ -7,6 +7,7 @@
     </navigation-bar>
     <HomeSwiper v-bind:banners="banner"></HomeSwiper>
     <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
+    <HomeFashion></HomeFashion>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import NavigationBar from "@/components/commons/Navigation/NavigationBar";
 import {getHomeMultiData} from "@/network/home";
 import HomeSwiper from "@/views/Home/subcomponents/HomeSwiper";
 import HomeRecommend from "@/views/Home/subcomponents/HomeRecommend";
+import HomeFashion from "@/views/Home/subcomponents/HomeFashion";
 
 export default {
   name: "Home",
@@ -22,6 +24,7 @@ export default {
     NavigationBar,
     HomeSwiper,
     HomeRecommend,
+    HomeFashion,
   },
   data() {
     return {
