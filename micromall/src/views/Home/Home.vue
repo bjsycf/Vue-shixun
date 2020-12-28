@@ -6,6 +6,7 @@
       </div>
     </navigation-bar>
     <HomeSwiper v-bind:banners="banner"></HomeSwiper>
+    <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
   </div>
 </template>
 
@@ -13,16 +14,19 @@
 import NavigationBar from "@/components/commons/Navigation/NavigationBar";
 import {getHomeMultiData} from "@/network/home";
 import HomeSwiper from "@/views/Home/subcomponents/HomeSwiper";
+import HomeRecommend from "@/views/Home/subcomponents/HomeRecommend";
 
 export default {
   name: "Home",
   components: {
     NavigationBar,
     HomeSwiper,
+    HomeRecommend,
   },
   data() {
     return {
       banner: [],//存储轮播图网址
+      recommend: [],//存储每日推荐信息
     }
   },
   created() {
@@ -30,6 +34,7 @@ export default {
         res => {
           console.log(res);
           this.banner = res.data.banner.list
+          this.recommend = res.data.recommend.list
         }
     )
   }
