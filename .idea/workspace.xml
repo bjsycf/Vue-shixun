@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.28">
-      <change afterPath="$PROJECT_DIR$/micromall/src/assets/img/home/recommend_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micromall/src/views/Home/subcomponents/HomeFashion.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/components/contexts/TabControl/TabControl.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" afterDir="false" />
     </list>
@@ -66,7 +65,8 @@
       <updated>1608897636954</updated>
       <workItem from="1608897638117" duration="480000" />
       <workItem from="1609112479346" duration="57000" />
-      <workItem from="1609112589333" duration="14483000" />
+      <workItem from="1609112589333" duration="15315000" />
+      <workItem from="1609134493054" duration="1691000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1608897983622</created>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609126233238</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="12.28">
+      <created>1609127403130</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609127403130</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +154,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />

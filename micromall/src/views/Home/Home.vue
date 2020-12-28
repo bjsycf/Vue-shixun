@@ -8,6 +8,7 @@
     <HomeSwiper v-bind:banners="banner"></HomeSwiper>
     <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
     <HomeFashion></HomeFashion>
+    <TabControl v-bind:titles="['流行','新款','精选']"></TabControl>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import {getHomeMultiData} from "@/network/home";
 import HomeSwiper from "@/views/Home/subcomponents/HomeSwiper";
 import HomeRecommend from "@/views/Home/subcomponents/HomeRecommend";
 import HomeFashion from "@/views/Home/subcomponents/HomeFashion";
+import TabControl from "@/components/contexts/TabControl/TabControl";
 
 export default {
   name: "Home",
@@ -25,6 +27,7 @@ export default {
     HomeSwiper,
     HomeRecommend,
     HomeFashion,
+    TabControl,
   },
   data() {
     return {
