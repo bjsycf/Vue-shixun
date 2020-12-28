@@ -10,11 +10,19 @@
 
 <script>
 import NavigationBar from "@/components/commons/Navigation/NavigationBar";
+import {getHomeMultiData} from "@/network/home";
 
 export default {
   name: "Home",
   components: {
     NavigationBar,
+  },
+  created() {
+    getHomeMultiData().then(
+        res => {
+          console.log(res);
+        }
+    )
   }
 }
 </script>
