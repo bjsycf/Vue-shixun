@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.28">
-      <change afterPath="$PROJECT_DIR$/micromall/src/components/contexts/GoodsList/GoodsList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micromall/src/components/contexts/GoodsList/GoodsListItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/components/contexts/TabControl/TabControl.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/components/contexts/TabControl/TabControl.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/network/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/network/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" afterDir="false" />
-    </list>
+    <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.28" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +35,8 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="H:\WebStorm 2020.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -71,6 +65,7 @@
       <workItem from="1609112589333" duration="15315000" />
       <workItem from="1609134493054" duration="8388000" />
       <workItem from="1609142972729" duration="45000" />
+      <workItem from="1609143212138" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1608897983622</created>
@@ -149,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609136207708</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="12.28">
+      <created>1609143234986</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609143234986</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
