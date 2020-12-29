@@ -120,7 +120,7 @@ export default {
   overflow: hidden;
   position: absolute;
   top: 44px;
-  bottom: 49px;
+  bottom: 49px; /*距离底部高度*/
   left: 0;
   right: 0;
 }
