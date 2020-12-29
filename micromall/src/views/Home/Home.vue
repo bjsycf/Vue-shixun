@@ -5,13 +5,14 @@
         购物街
       </div>
     </navigation-bar>
-    <scroll class="content">
+    <scroll class="content" v-bind:probe-type="3" v-on:scroll="contentScroll" ref="scroll">
       <HomeSwiper v-bind:banners="banner"></HomeSwiper>
       <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
       <HomeFashion></HomeFashion>
       <TabControl v-bind:titles="['流行','新款','精选']" v-on:tabClicked="tabClicked"></TabControl>
       <GoodsList v-bind:goods="goods[this.currentType].list"></GoodsList>
     </scroll>
+    <back-to-top v-show="isShowBackToTop" v-on:click.native="backClicked"></back-to-top>
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import TabControl from "@/components/contexts/TabControl/TabControl";
 import {getHomeGoods} from "@/network/home";
 import GoodsList from "@/components/contexts/GoodsList/GoodsList";
 import Scroll from "@/components/commons/Scroll/Scroll";
+import BackToTop from "@/components/contexts/BackToTop/BackToTop";
 
 export default {
   name: "Home",
@@ -36,6 +38,7 @@ export default {
     TabControl,
     GoodsList,
     Scroll,
+    BackToTop,
   },
   data() {
     return {
@@ -54,6 +57,7 @@ export default {
         },
       },
       currentType: 'pop',//存储当前选中类型
+      isShowBackToTop: false,//返回顶部组件默认不显示
     }
   },
   created() {
@@ -95,6 +99,13 @@ export default {
           this.currentType = 'sell'
           break
       }
+    },
+    contentScroll(position) {
+      //console.log(position);
+      this.isShowBackToTop = (-position.y) > 1200
+    },
+    backClicked() {
+      this.$refs.scroll.scroll.scrollTo(0, 0)
     }
   }
 }
