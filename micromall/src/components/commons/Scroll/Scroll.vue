@@ -29,6 +29,11 @@ export default {
       //console.log(position);
       this.$emit('scroll', position)
     })
+  },
+  methods: {
+    scrollTo(x, y, time = 300) {
+      this.scroll && this.scroll.scrollTo(x, y, time)
+    }
   }
 }
 </script>

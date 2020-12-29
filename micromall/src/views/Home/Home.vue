@@ -105,7 +105,7 @@ export default {
       this.isShowBackToTop = (-position.y) > 1200
     },
     backClicked() {
-      this.$refs.scroll.scroll.scrollTo(0, 0)
+      this.$refs.scroll.scrollTo(0, 0)
     }
   }
 }
