@@ -8,8 +8,8 @@
     <HomeSwiper v-bind:banners="banner"></HomeSwiper>
     <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
     <HomeFashion></HomeFashion>
-    <TabControl v-bind:titles="['流行','新款','精选']"></TabControl>
-    <GoodsList v-bind:goods="goods['pop'].list"></GoodsList>
+    <TabControl v-bind:titles="['流行','新款','精选']" v-on:tabClicked="tabClicked"></TabControl>
+    <GoodsList v-bind:goods="goods[this.currentType].list"></GoodsList>
   </div>
 </template>
 
@@ -48,7 +48,8 @@ export default {
         'sell': {
           page: 0, list: []
         },
-      }
+      },
+      currentType: 'pop',//存储当前选中类型
     }
   },
   created() {
@@ -79,8 +80,20 @@ export default {
             this.goods[type].page = page + 1
           }
       )
+    },
+    tabClicked(index) {
+      switch (index) {
+        case 0:
+          this.currentType = 'pop'
+          break
+        case 1:
+          this.currentType = 'new'
+          break
+        case 2:
+          this.currentType = 'sell'
+          break
+      }
     }
-
   }
 }
 </script>
