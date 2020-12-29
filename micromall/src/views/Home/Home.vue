@@ -68,7 +68,7 @@ export default {
       currentType: 'pop',//存储当前选中类型
       isShowBackToTop: false,//返回顶部组件默认不显示
       isTabControlFixed: false,//是否固定
-      tabOffsetTop: 540,//保存滚动的距离
+      tabOffsetTop: 500,//保存滚动的距离
     }
   },
   created() {
