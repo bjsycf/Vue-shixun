@@ -3,8 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>better Scroll的基本使用</title>
+    <script src="bscroll.js" type="text/javascript"></script>
+    <script src="vue.js" type="text/javascript"></script>
+    <style>
+        .wrapper {
+            height: 400px;
+            background-color: #80c6e2;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
+<div class="wrapper" id="app">
+    <ul class="content"  >
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+        <li v-on:click='clicked'>列表内容</li>
+    </ul>
+</div>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        methods: {
+            clicked() {
+                console.log('nb');
+            }
+        },
+        mounted() {
+            let wrapper = document.querySelector('.wrapper')
+            let scroll = new BScroll(wrapper, {
+                probeType: 3,
+                click: true,
+            })
 
+            function postion(pos) {
+                console.log(pos);
+            }
+
+            scroll.on('scroll', postion)
+        }
+    })
+
+</script>
 </body>
 </html>
