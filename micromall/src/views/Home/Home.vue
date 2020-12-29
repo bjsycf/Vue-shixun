@@ -1,15 +1,17 @@
 <template>
-  <div>
+  <div id="home">
     <navigation-bar class="home-nav">
       <div slot="center">
         购物街
       </div>
     </navigation-bar>
-    <HomeSwiper v-bind:banners="banner"></HomeSwiper>
-    <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
-    <HomeFashion></HomeFashion>
-    <TabControl v-bind:titles="['流行','新款','精选']" v-on:tabClicked="tabClicked"></TabControl>
-    <GoodsList v-bind:goods="goods[this.currentType].list"></GoodsList>
+    <scroll class="content">
+      <HomeSwiper v-bind:banners="banner"></HomeSwiper>
+      <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
+      <HomeFashion></HomeFashion>
+      <TabControl v-bind:titles="['流行','新款','精选']" v-on:tabClicked="tabClicked"></TabControl>
+      <GoodsList v-bind:goods="goods[this.currentType].list"></GoodsList>
+    </scroll>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import HomeFashion from "@/views/Home/subcomponents/HomeFashion";
 import TabControl from "@/components/contexts/TabControl/TabControl";
 import {getHomeGoods} from "@/network/home";
 import GoodsList from "@/components/contexts/GoodsList/GoodsList";
+import Scroll from "@/components/commons/Scroll/Scroll";
 
 export default {
   name: "Home",
@@ -32,6 +35,7 @@ export default {
     HomeFashion,
     TabControl,
     GoodsList,
+    Scroll,
   },
   data() {
     return {
@@ -63,10 +67,8 @@ export default {
     getHomeMultiData() {
       getHomeMultiData().then(
           res => {
-            console.log(res)
-
+            //console.log(res)
             this.banner = res.data.banner.list
-
             this.recommend = res.data.recommend.list
           }
       )
@@ -75,7 +77,7 @@ export default {
       const page = this.goods[type].page + 1
       getHomeGoods(type, page).then(
           res => {
-            console.log(res)
+            //console.log(res)
             this.goods[type].list = res.data.list
             this.goods[type].page = page + 1
           }
@@ -98,8 +100,28 @@ export default {
 }
 </script>
 <style scoped>
+#home {
+  padding-top: 44px;
+  height: 100vh;
+  position: relative;
+}
+
 .home-nav {
   background: var(--color-tint);
   color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+
+.content {
+  overflow: hidden;
+  position: absolute;
+  top: 44px;
+  bottom: 49px;
+  left: 0;
+  right: 0;
 }
 </style>
