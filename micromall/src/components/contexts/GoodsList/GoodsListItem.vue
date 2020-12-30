@@ -1,5 +1,5 @@
 <template>
-  <div class="goods-item">
+  <div class="goods-item" v-on:click="itemClicked">
     <img v-bind:src="goodsItem.show.img" v-on:load="imageLoad">
     <div class="goods-info">
       <p>{{ goodsItem.title }}</p>
@@ -21,11 +21,15 @@ export default {
       }
     }
   },
-  methods:{
-    imageLoad(){
+  methods: {
+    imageLoad() {
       //console.log("itemImageLoad")
       //无法获得Scroll对象，只能在父组件中进行处理。
       this.$bus.$emit('itemImageLoad')
+    },
+    itemClicked() {
+      console.log('跳转到详情页');
+      this.$router.push('/detail/' + this.goodsItem.iid)
     }
   }
 }
