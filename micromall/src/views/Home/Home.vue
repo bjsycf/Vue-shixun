@@ -117,8 +117,8 @@ export default {
           this.currentType = 'sell'
           break
       }
-      this.$refs.tabControl1.currentType = index
-      this.$refs.tabControl2.currentType = index
+      this.$refs.tabControl1.currentIndex = index
+      this.$refs.tabControl2.currentIndex = index
     },
     contentScroll(position) {
       //console.log(position);
@@ -154,7 +154,7 @@ export default {
   },
   activated() {
     console.log('激活home页面');
-    this.$refs.scroll.scrollTo(0,this.positionY,0)
+    this.$refs.scroll.scrollTo(0, this.positionY, 0)
     this.$refs.scroll.refresh()
   }
 }
