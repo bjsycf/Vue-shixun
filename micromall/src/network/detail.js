@@ -3,6 +3,7 @@ import {request} from "@/network/requests";
 export function getDetail(iid) {
     return request({
         url: '/detail',
+        //传参
         params: {
             iid,
         }

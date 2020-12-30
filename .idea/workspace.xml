@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.30">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/components/commons/Scroll/Scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/components/commons/Scroll/Scroll.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/network/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/network/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailBaseInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailBaseInfo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,8 @@
       <workItem from="1609288877399" duration="5845000" />
       <workItem from="1609298765281" duration="2472000" />
       <workItem from="1609305442940" duration="11313000" />
-      <workItem from="1609329289303" duration="208000" />
+      <workItem from="1609329289303" duration="232000" />
+      <workItem from="1609336598983" duration="3251000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1608897983622</created>
@@ -346,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609317619717</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="12.30">
+      <created>1609329511064</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1609329511064</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

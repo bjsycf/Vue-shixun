@@ -79,8 +79,8 @@ export default {
   line-height: 30px;
   display: flex;
   font-size: 13px;
-  border-bottom: 1px solid rgba(100, 100, 100, .1);
-  justify-content: space-between;
+  border-bottom: 1px solid rgba(100, 100, 100, .1);/*下划线*/
+  justify-content: space-between;/*周围留空*/
 }
 
 .info-service {

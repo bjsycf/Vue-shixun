@@ -1,4 +1,5 @@
 <template>
+  <!--注册引用信息-->
   <div class="wrapper" ref="wrapper">
     <div class="content">
       <slot></slot>
@@ -16,11 +17,14 @@ export default {
       scroll: null,
     }
   },
+  //验证传值
   props: {
+    //滚动监听
     probeType: {
       Number,
       default: 0,
     },
+    //上拉监听
     pullUpLoad: {
       type: Boolean,
       default: false,
