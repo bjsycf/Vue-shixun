@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.30">
-      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailNavigationBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/network/detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailBaseInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailCommentInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailGoodsInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailParamInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailShopInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailSwiper.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/components/commons/Scroll/Scroll.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/components/commons/Scroll/Scroll.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micromall/src/components/contexts/GoodsList/GoodsListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/components/contexts/GoodsList/GoodsListItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/views/Home/subcomponents/HomeFashion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Home/subcomponents/HomeFashion.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +27,7 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="package.json" />
         <option value="Vue Single File Component" />
       </list>
     </option>
@@ -102,7 +109,7 @@
       <workItem from="1609285970763" duration="2859000" />
       <workItem from="1609288877399" duration="5845000" />
       <workItem from="1609298765281" duration="2472000" />
-      <workItem from="1609305442940" duration="4500000" />
+      <workItem from="1609305442940" duration="10230000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1608897983622</created>
@@ -314,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609305526259</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="12.30">
+      <created>1609310638013</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609310638013</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
