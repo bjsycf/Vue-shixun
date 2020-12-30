@@ -3,13 +3,13 @@
     <detail-navigation-bar class="detail-nav"></detail-navigation-bar>
     <!--使用前面封装的Scroll.vue，进行滚动效果的调整-->
     <scroll class="content" ref="scroll">
-      <detail-swiper :top-images="topImages"></detail-swiper>
-      <detail-base-info :goods="goods"/>
-      <detail-shop-info :shop="shop"/>
-      <detail-goods-info :detail-info="detailInfo" @imageLoad="imageLoad"/>
-      <detail-param-info :param-info="paramInfo"/>
-      <detail-comment-info :comment-info="commentInfo"/>
-      <goods-list :goods="recommends"></goods-list>
+      <detail-swiper v-bind:top-images="topImages"></detail-swiper>
+      <detail-base-info v-bind:goods="goods"/>
+      <detail-shop-info v-bind:shop="shop"/>
+      <detail-goods-info v-bind:detail-info="detailInfo" v-on:imageLoad="imageLoad"/>
+      <detail-param-info v-bind:param-info="paramInfo"/>
+      <detail-comment-info v-bind:comment-info="commentInfo"/>
+      <goods-list v-bind:goods="recommends"></goods-list>
     </scroll>
   </div>
 </template>
