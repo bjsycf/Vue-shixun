@@ -26,6 +26,7 @@
       ></TabControl>
       <GoodsList v-bind:goods="goods[this.currentType].list"></GoodsList>
     </scroll>
+    <!--原生标签是可以直接监听的，监听组件的话，必须使用 .native 修饰符-->
     <back-to-top v-show="isShowBackToTop" v-on:click.native="backClicked"></back-to-top>
   </div>
 </template>
@@ -81,14 +82,17 @@ export default {
   created() {
     //请求首页公共数据
     this.getHomeMultiData()
+    //请求商品数据
     this.getHomeGoods('pop')
     this.getHomeGoods('new')
     this.getHomeGoods('sell')
   },
   methods: {
+    //网络请求相关的方法
     getHomeMultiData() {
       getHomeMultiData().then(
           res => {
+            //临时查看网络的请求结果
             //console.log(res)
             this.banner = res.data.banner.list
             this.recommend = res.data.recommend.list
@@ -105,6 +109,7 @@ export default {
           }
       )
     },
+    //事件监听相关的方法
     tabClicked(index) {
       switch (index) {
         case 0:
@@ -117,13 +122,16 @@ export default {
           this.currentType = 'sell'
           break
       }
+      //使两个选中的保持一致
       this.$refs.tabControl1.currentIndex = index
       this.$refs.tabControl2.currentIndex = index
     },
     contentScroll(position) {
       //console.log(position);
       //是否显示BackToTop
+      //判断BackTop是否显示,滚动到 一定的位置才会显示
       this.isShowBackToTop = (-position.y) > 1200
+      //决定tabControl是否吸顶(position:fixed)
       this.isTabControlFixed = (-position.y) > this.tabOffsetTop
     },
     backClicked() {
@@ -131,6 +139,8 @@ export default {
     },
     LoadMore() {
       this.getHomeGoods(this.currentType)
+      // 完成上拉加载更多
+      // 这个代码放到getHomeGoods，在初始化的时候调用会有问题
       this.$refs.scroll.finishPullUp()
     },
     swiperImageLoad() {
@@ -139,6 +149,11 @@ export default {
     }
   },
   mounted() {
+    //监听图片加载完成的事件
+    //this.$bus.$on('itemImageLoad', () =>{
+    //console.log("图片加载完成");
+    //this.$refs.scroll.refresh()
+    // })
     const refresh = debounce(this.$refs.scroll.refresh, 50)
     this.$bus.$on('itemImageLoad', () => {
       console.log('图片加载完成');
@@ -169,6 +184,7 @@ export default {
 .home-nav {
   background: var(--color-tint);
   color: #fff;
+  /*在使用浏览器原生滚动时, 为了让导航不跟随一起滚动*/
   position: fixed;
   left: 0;
   right: 0;

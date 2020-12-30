@@ -29,9 +29,10 @@ export default {
 
   mounted() {
     //创建scroll对象
+    //ref 如果是绑定到组件上的，通过 this.$refs.refname 拿到的就是组件对象
     this.scroll = new BScroll(this.$refs.wrapper, {
-      probeType: this.probeType,
-      pullUpLoad: this.pullUpLoad,
+      probeType: this.probeType,//是否需要进行实时监听
+      pullUpLoad: this.pullUpLoad,//上拉监听
       click: true
     })
     //设置滚动监听
@@ -51,6 +52,7 @@ export default {
     scrollTo(x, y, time = 300) {
       this.scroll && this.scroll.scrollTo(x, y, time)
     },
+    //完成加载更多
     finishPullUp() {
       this.scroll && this.scroll.finishPullUp()
     },

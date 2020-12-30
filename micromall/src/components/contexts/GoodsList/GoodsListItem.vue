@@ -23,6 +23,8 @@ export default {
   },
   methods:{
     imageLoad(){
+      //console.log("itemImageLoad")
+      //无法获得Scroll对象，只能在父组件中进行处理。
       this.$bus.$emit('itemImageLoad')
     }
   }
