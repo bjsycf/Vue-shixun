@@ -5,19 +5,24 @@
         购物街
       </div>
     </navigation-bar>
+    <tab-control v-bind:titles="['流行','新款','精选']"
+                 v-on:tabClicked="tabClicked"
+                 class="tab-control"
+                 v-show="isTabControlFixed"
+                 ref="tabControl1"></tab-control>
     <scroll class="content"
             v-bind:probe-type="3"
             v-on:scroll="contentScroll"
             ref="scroll"
             v-bind:pull-up-load="true"
             v-on:pullingUp="LoadMore">
-      <HomeSwiper v-bind:banners="banner"></HomeSwiper>
+      <HomeSwiper v-bind:banners="banner" v-on:swiperImageLoad="swiperImageLoad"></HomeSwiper>
       <HomeRecommend v-bind:recommend="recommend"></HomeRecommend>
       <HomeFashion></HomeFashion>
       <TabControl v-bind:titles="['流行','新款','精选']"
                   v-on:tabClicked="tabClicked"
-                  v-show="isTabControlFixed"
                   class="tab-control"
+                  ref="tabControl2"
       ></TabControl>
       <GoodsList v-bind:goods="goods[this.currentType].list"></GoodsList>
     </scroll>
@@ -110,6 +115,8 @@ export default {
           this.currentType = 'sell'
           break
       }
+      this.$refs.tabControl1.currentType = index
+      this.$refs.tabControl2.currentType = index
     },
     contentScroll(position) {
       //console.log(position);
@@ -123,6 +130,10 @@ export default {
     LoadMore() {
       this.getHomeGoods(this.currentType)
       this.$refs.scroll.finishPullUp()
+    },
+    swiperImageLoad() {
+      console.log(this.$refs.tabControl2.$el.offsetTop);
+      this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
     }
   }
 }
