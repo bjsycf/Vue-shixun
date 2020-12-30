@@ -95,10 +95,9 @@ export default {
 <style scoped>
 #detail {
   position: relative;
-  z-index: 9;/*堆叠顺序9*/
+  z-index: 9;
   background-color: #fff;
   height: 100vh;
-  z-index: 1;
 }
 
 .detail-nav {
