@@ -41,6 +41,7 @@ import {getHomeGoods} from "@/network/home";
 import GoodsList from "@/components/contexts/GoodsList/GoodsList";
 import Scroll from "@/components/commons/Scroll/Scroll";
 import BackToTop from "@/components/contexts/BackToTop/BackToTop";
+import {debounce} from "@/commons/utils";
 
 export default {
   name: "Home",
@@ -73,7 +74,8 @@ export default {
       currentType: 'pop',//存储当前选中类型
       isShowBackToTop: false,//返回顶部组件默认不显示
       isTabControlFixed: false,//是否固定
-      tabOffsetTop: 500,//保存滚动的距离
+      tabOffsetTop: 0,//滚动的距离
+      positionY: 0,//保存页面的滚动距离
     }
   },
   created() {
@@ -135,6 +137,25 @@ export default {
       console.log(this.$refs.tabControl2.$el.offsetTop);
       this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
     }
+  },
+  mounted() {
+    const refresh = debounce(this.$refs.scroll.refresh, 50)
+    this.$bus.$on('itemImageLoad', () => {
+      console.log('图片加载完成');
+      refresh()
+    })
+  },
+  destroyed() {
+    console.log('home页面被销毁');
+  },
+  deactivated() {
+    console.log('离开home页面');
+    this.positionY = this.$refs.scroll.getScrollPosition()
+  },
+  activated() {
+    console.log('激活home页面');
+    this.$refs.scroll.scrollTo(0,this.positionY,0)
+    this.$refs.scroll.refresh()
   }
 }
 </script>
