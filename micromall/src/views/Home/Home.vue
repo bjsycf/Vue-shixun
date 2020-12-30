@@ -156,7 +156,7 @@ export default {
     // })
     const refresh = debounce(this.$refs.scroll.refresh, 50)
     this.$bus.$on('itemImageLoad', () => {
-      console.log('图片加载完成');
+      //console.log('图片加载完成');
       refresh()
     })
   },

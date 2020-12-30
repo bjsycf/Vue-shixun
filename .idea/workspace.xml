@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.30">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Home/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,8 @@
       <workItem from="1609285970763" duration="2859000" />
       <workItem from="1609288877399" duration="5845000" />
       <workItem from="1609298765281" duration="2472000" />
-      <workItem from="1609305442940" duration="11282000" />
+      <workItem from="1609305442940" duration="11313000" />
+      <workItem from="1609329289303" duration="208000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1608897983622</created>
@@ -338,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609317524208</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="12.30">
+      <created>1609317619717</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1609317619717</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
