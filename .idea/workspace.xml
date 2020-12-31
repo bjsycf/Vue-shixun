@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="37482bc9-7b15-42a1-bba3-e9ab9bb65226" name="默认的" comment="12.30">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/views/Detail/Detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micromall/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/micromall/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1609305442940" duration="11313000" />
       <workItem from="1609329289303" duration="232000" />
       <workItem from="1609336598983" duration="3305000" />
-      <workItem from="1609371934854" duration="525000" />
+      <workItem from="1609371934854" duration="5449000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1608897983622</created>
@@ -362,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609339897145</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="12.30">
+      <created>1609372470742</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1609372470742</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,5 +404,17 @@
     <MESSAGE value="12.29" />
     <MESSAGE value="12.30" />
     <option name="LAST_COMMIT_MESSAGE" value="12.30" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/micromall/src/views/Detail/subcomponents/DetailBaseInfo.vue</url>
+          <line>37</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
