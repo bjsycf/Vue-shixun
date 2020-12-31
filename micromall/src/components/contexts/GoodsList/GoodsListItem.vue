@@ -52,7 +52,8 @@ export default {
 
 .goods-item img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: #ff8198 solid 1px;
 }
 
 .goods-info {
