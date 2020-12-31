@@ -40,9 +40,7 @@ export default {
   filters: {
     showDate(value) {
       const date = new Date(value * 1000)
-
       return dataformat(date, 'yyyy-MM-dd hh:mm:ss')
-
     }
   }
 }
