@@ -166,10 +166,11 @@ export default {
   deactivated() {
     console.log('离开home页面');
     this.positionY = this.$refs.scroll.getScrollPosition()
+    console.log(this.positionY);
   },
   activated() {
     console.log('激活home页面');
-    this.$refs.scroll.scrollTo(0, this.positionY, 0)
+    this.$refs.scroll.scrollTo(0, this.positionY, 1)
     this.$refs.scroll.refresh()
   }
 }
